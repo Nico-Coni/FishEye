@@ -286,7 +286,7 @@ p {
     right: 25px;
 }
 
-.lightbox_content i {
+.lightbox_content span {
     cursor: pointer;
     color: #901C1C;
     font-size: 50px;

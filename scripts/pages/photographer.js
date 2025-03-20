@@ -38,28 +38,28 @@ function getMedia(urlId, data) {
 }
 
 //Ecoute le changement de filtre de tri et actualise les medias au click
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdownMenu = document.querySelector('.dropdown__menu');
-    dropdownMenu.addEventListener("click", function () {
-        const cleTri = dropdownMenu.value;
+// document.addEventListener('DOMContentLoaded', function () {
+const dropdownMenu = document.querySelector('.dropdown__menu');
+dropdownMenu.addEventListener("click", function () {
+    const cleTri = dropdownMenu.value;
 
-        // Tri des médias
-        medias.sort(function (a, b) {
-            if (cleTri === 'date') {
-                return new Date(a.date) - new Date(b.date);
-            } else if (cleTri === 'likes') {
-                return b.likes - a.likes;
-            } else if (cleTri === 'title') {
-                return a.title.localeCompare(b.title);
-            }
-        });
-
-        const mediaSection = document.querySelector('.media_section');
-        mediaSection.innerHTML = '';
-
-        // Affiche les médias triés
-        medias.forEach(media => mediaPhotographerTemplate(media));
+    // Tri des médias
+    medias.sort(function (a, b) {
+        if (cleTri === 'date') {
+            return new Date(a.date) - new Date(b.date);
+        } else if (cleTri === 'likes') {
+            return b.likes - a.likes;
+        } else if (cleTri === 'title') {
+            return a.title.localeCompare(b.title);
+        }
     });
+
+    const mediaSection = document.querySelector('.media_section');
+    mediaSection.innerHTML = '';
+
+    // Affiche les médias triés
+    medias.forEach(media => mediaPhotographerTemplate(media));
 });
+// });
 
 initPhotographers();

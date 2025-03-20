@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
   <link href="css/style.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
 <body>
   <header>
     <a href="index.html">
-      <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page" />
+      <img src="assets/images/logo.png" class="logo" alt="Logo de Fisheye, plateforme de photographie" />
     </a>
   </header>
   <main id="main">
@@ -45,33 +45,33 @@
           <h2>Contactez-moi</h2>
           <h2 id="user_name"></h2>
         </div>
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
+        <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer la fenetre" />
       </header>
       <form id="form">
         <div>
-          <label>Prénom</label>
-          <input name="prenom" />
-          <label>Nom</label>
-          <input name="nom" />
-          <label>Email</label>
-          <input name="email" />
-          <label>Votre message</label>
-          <textarea name="message"></textarea>
+          <label for="prenom">Prénom</label>
+          <input id="prenom" name="prenom" />
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" />
+          <label for="email">Email</label>
+          <input id="email" name="email" />
+          <label for="message">Votre message :</label>
+          <textarea id="message" name="message"></textarea>
         </div>
-        <button class="contact_button">Envoyer</button>
+        <button class="contact_button" aria-label="Envoie du formulaire">Envoyer</button>
       </form>
     </div>
   </div>
   <dialog id="lightbox_modal" aria-label="image closeup view">
     <div class="lightbox_content">
-      <button type="button" onclick="closeLightbox()" aria-label="Bouton pour fermer la boîte de dialogue">
-        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      <button type="button" onclick="closeLightbox()" aria-label="Fermer la boîte de dialogue">
+        <span class="fa-solid fa-xmark" aria-hidden="true"></span>
       </button>
-      <button type="button" onclick="defilement(-1)" aria-label="Bouton pour passer à l'image precedente">
-        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+      <button type="button" onclick="defilement(-1)" aria-label="Image precedente">
+        <span class="fa-solid fa-chevron-left" aria-hidden="true"></span>
       </button>
-      <button type="button" onclick="defilement(1)" aria-label="Bouton pour passer à l'image suivante">
-        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      <button type="button" onclick="defilement(1)" aria-label="Image suivante">
+        <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
   </dialog>
